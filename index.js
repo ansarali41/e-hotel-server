@@ -133,7 +133,7 @@ client.connect(err => {
                 res.send(result.modifiedCount > 0);
             });
     });
-    // delete from database
+    // delete from
     app.delete('/deleteService/:id', (req, res) => {
         const id = req.params.id;
         ordersCollection.deleteOne({ _id: objectId(req.params.id) }).then(result => {
